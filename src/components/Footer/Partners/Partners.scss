@@ -1,0 +1,13 @@
+@import "../../../css-config/mixins.scss";
+.partners-section {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBE7C6 url("../../../assets/slidesmain.mp4");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
