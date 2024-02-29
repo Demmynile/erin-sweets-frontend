@@ -6,12 +6,13 @@ import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 import {useAuth0} from '@auth0/auth0-react'
-import Adverts from "../Footer/Adverts/Adverts";
-import Newsletter from "../Footer/Newsletter/Newsletter";
+import { Loading } from "../../utils/loading";
+// import Adverts from "../Footer/Adverts/Adverts";
+// import Newsletter from "../Footer/Newsletter/Newsletter";
 
 const Home = () => {
     const {logout} = useAuth0()
-    const { products, setProducts, categories, setCategories } =
+    const { products, setProducts, categories, setCategories , changeLoadingState , isLoading } =
         useContext(Context);
     useEffect(() => {
         getProducts();
@@ -19,13 +20,17 @@ const Home = () => {
     }, []);
 
     const getProducts = () => {
+        changeLoadingState(false)
         fetchDataFromApi("/api/products?populate=*").then((res) => {
             setProducts(res);
+            changeLoadingState(true)
         });
     };
     const getCategories = () => {
+        changeLoadingState(false)
         fetchDataFromApi("/api/categories?populate=*").then((res) => {
             setCategories(res);
+            changeLoadingState(false)
         });
     };
 
@@ -34,7 +39,7 @@ const Home = () => {
             <Banner />
             <div className="main-content">
                 <div className="layout">
-                    <Category headingText="Categories" categories={categories} />
+                    {!isLoading ? (< Loading />) : (<Category headingText="Categories" categories={categories} />)}
                     <Products
                         headingText="Popular Products"
                         products={products}

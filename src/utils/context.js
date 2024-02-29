@@ -11,7 +11,9 @@ const AppContext = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartCount, setCartCount] = useState(0);
     const [cartSubTotal, setCartSubTotal] = useState(0);
+    const [isLoading , setLoading] = useState(false)
     const location = useLocation();
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -28,7 +30,11 @@ const AppContext = ({ children }) => {
                 (subTotal += item.attributes.price * item.attributes.quantity)
         );
         setCartSubTotal(subTotal);
-    }, [cartItems]);
+    }, [cartItems]); 
+
+    const changeLoadingState = (action) => {
+        setLoading(action)
+    }
 
     const handleAddToCart = (product, quantity) => {
         let items = [...cartItems];
@@ -76,6 +82,8 @@ const AppContext = ({ children }) => {
                 setShowCart,
                 handleCartProductQuantity,
                 cartSubTotal,
+                isLoading,
+                changeLoadingState
             }}
         >
             {children}
