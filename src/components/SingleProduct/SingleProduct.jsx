@@ -16,9 +16,7 @@ import { formatNumber } from "../../utils/currency";
 import { Loading } from "../misc/loading";
 
 const SingleProduct = () => {
-
-   
-
+    
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
@@ -26,6 +24,11 @@ const SingleProduct = () => {
 
     useEffect(() => {
          changeLoadingState(true)
+
+         if(data){
+            changeLoadingState(false)
+            
+        }
     })
 
     const decrement = () => {
@@ -40,10 +43,7 @@ const SingleProduct = () => {
 
     if (!data) return;
 
-    if(data){
-        changeLoadingState(false)
-        
-    }
+    
     const product =  data?.data?.[0]?.attributes;
     console.log(isLoading)
 
