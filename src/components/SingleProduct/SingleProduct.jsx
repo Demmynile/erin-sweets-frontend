@@ -20,7 +20,7 @@ const SingleProduct = () => {
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const { data , loading } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
-    const {isLoading , changeLoadingState , handleAddToCart} = useContext(Context)
+    const { handleAddToCart} = useContext(Context)
 
     
 
@@ -33,9 +33,7 @@ const SingleProduct = () => {
     const increment = () => {
         setQuantity((prevState) => prevState + 1);
     };
-    if(data){
-        changeLoadingState(false)
-    }
+
     if (!data) return;
 
     const product =  data?.data?.[0]?.attributes;
@@ -46,7 +44,7 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                {!loading ? 
+                {loading ? (<Loading />) :
                 (<div className="single-product-page">
                         <div className="left">
                             <img
@@ -101,10 +99,7 @@ const SingleProduct = () => {
                                 </span>
                             </div>
                         </div>
-                </div>) 
-                : 
-                (<Loading />)
-                }
+                </div>) }
                 {/* {!isLoading ?  */}
                 <RelatedProducts
                         productId={id}
