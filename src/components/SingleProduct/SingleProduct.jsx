@@ -32,13 +32,19 @@ const SingleProduct = () => {
     };
 
     if (!data) return;
-    if (data) return changeLoadingState(false)
+    
     console.log(data)
-    const product = data?.data?.[0]?.attributes;
+
+    if(data){
+        changeLoadingState(false)
+        
+    }
+    const product =  data?.data?.[0]?.attributes;
+    
 
     return (
         <>
-            {isLoading ? 
+            {!isLoading ? 
             (<div className="single-product-main-content">
                 <div className="layout">
                     <div className="single-product-page">
@@ -96,7 +102,7 @@ const SingleProduct = () => {
                             </div>
                         </div>
                     </div>
-                    {isLoading ? (<RelatedProducts
+                    {!isLoading ? (<RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
                     />) : (< Loading />)}
