@@ -38,7 +38,7 @@ const SingleProduct = () => {
 
     return (
         <>
-            {!isLoading ? 
+            {isLoading ? 
             (<div className="single-product-main-content">
                 <div className="layout">
                     <div className="single-product-page">
@@ -96,7 +96,7 @@ const SingleProduct = () => {
                             </div>
                         </div>
                     </div>
-                    {!isLoading ? (<RelatedProducts
+                    {isLoading ? (<RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
                     />) : (< Loading />)}
