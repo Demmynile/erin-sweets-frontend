@@ -13,12 +13,13 @@ import {
 } from "react-icons/fa";
 import "./SingleProduct.scss";
 import { formatNumber } from "../../utils/currency";
+import { Loading } from "../misc/loading";
 
 const SingleProduct = () => {
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
-    const { handleAddToCart } = useContext(Context);
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+    const {isLoading , changeLoadingState , handleAddToCart} = useContext(Context)
 
     const decrement = () => {
         setQuantity((prevState) => {
@@ -31,73 +32,79 @@ const SingleProduct = () => {
     };
 
     if (!data) return;
+    if (data) return changeLoadingState(false)
     console.log(data)
     const product = data?.data?.[0]?.attributes;
 
     return (
-        <div className="single-product-main-content">
-            <div className="layout">
-                <div className="single-product-page">
-                    <div className="left">
-                        <img
-                            src={
-                                product?.image?.data[0]?.attributes?.url
-                            }
-                        />
-                    </div>
-                    <div className="right">
-                        <span className="name">{product?.title}</span>
-                        <span className="price">{formatNumber(product?.price)}</span>
-                        <span className="desc">{product?.description}</span>
+        <>
+            {isLoading ? 
+            (<div className="single-product-main-content">
+                <div className="layout">
+                    <div className="single-product-page">
+                        <div className="left">
+                            <img
+                                src={
+                                    product?.image?.data[0]?.attributes?.url
+                                }
+                            />
+                        </div>
+                        <div className="right">
+                            <span className="name">{product?.title}</span>
+                            <span className="price">{formatNumber(product?.price)}</span>
+                            <span className="desc">{product?.description}</span>
 
-                        <div className="cart-buttons">
-                            <div className="quantity-buttons">
-                                <span onClick={decrement}>-</span>
-                                <span>{quantity}</span>
-                                <span onClick={increment}>+</span>
+                            <div className="cart-buttons">
+                                <div className="quantity-buttons">
+                                    <span onClick={decrement}>-</span>
+                                    <span>{quantity}</span>
+                                    <span onClick={increment}>+</span>
+                                </div>
+                                <button
+                                    className="add-to-cart-button"
+                                    onClick={() => {
+                                        handleAddToCart(data?.data?.[0], quantity);
+                                        setQuantity(1);
+                                    }}
+                                >
+                                    <FaCartPlus size={20} />
+                                    ADD TO CART
+                                </button>
                             </div>
-                            <button
-                                className="add-to-cart-button"
-                                onClick={() => {
-                                    handleAddToCart(data?.data?.[0], quantity);
-                                    setQuantity(1);
-                                }}
-                            >
-                                <FaCartPlus size={20} />
-                                ADD TO CART
-                            </button>
-                        </div>
 
-                        <span className="divider" />
-                        <div className="info-item">
-                            <span className="text-bold">
-                                Category:{" "}
-                                <span>
-                                    {
-                                        product?.categories?.data[0]?.attributes
-                                            .title
-                                    }
+                            <span className="divider" />
+                            <div className="info-item">
+                                <span className="text-bold">
+                                    Category:{" "}
+                                    <span>
+                                        {
+                                            product?.categories?.data[0]?.attributes
+                                                .title
+                                        }
+                                    </span>
                                 </span>
-                            </span>
-                            <span className="text-bold">
-                                Share:
-                                <span className="social-icons">
-                                    <FaFacebookF size={16} />
-                                    <FaTwitter size={16} />
-                                    <FaInstagram size={16} />
-                                    <FaLinkedinIn size={16} />
-                                    <FaPinterest size={16} />
+                                <span className="text-bold">
+                                    Share:
+                                    <span className="social-icons">
+                                        <FaFacebookF size={16} />
+                                        <FaTwitter size={16} />
+                                        <FaInstagram size={16} />
+                                        <FaLinkedinIn size={16} />
+                                        <FaPinterest size={16} />
+                                    </span>
                                 </span>
-                            </span>
+                            </div>
                         </div>
                     </div>
+                    {isLoading ? (<RelatedProducts
+                        productId={id}
+                        categoryId={product?.categories?.data[0]?.id}
+                    />) : (< Loading />)}
                 </div>
-                <RelatedProducts
-                    productId={id}
-                    categoryId={product?.categories?.data[0]?.id}
-                />
-            </div>
-        </div>
+             </div>
+            ) : (< Loading />)}
+        </>
+       
     );
 };
 

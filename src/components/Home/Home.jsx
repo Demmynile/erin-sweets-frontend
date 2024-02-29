@@ -46,10 +46,10 @@ const Home = () => {
             <div className="main-content">
                 <div className="layout">
                     {isLoading ? (<Category headingText="Categories" categories={categories} />) : (< Loading />)  }
-                    <Products
+                    {isLoading ? (<Products
                         headingText="Popular Products"
                         products={products}
-                    />
+                    />) : (< Loading />)}
                 </div>
             </div>
         </div>
