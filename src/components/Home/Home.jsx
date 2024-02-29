@@ -6,7 +6,7 @@ import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 import {useAuth0} from '@auth0/auth0-react'
-import { Loading } from "../loading";
+import { Loading } from "../misc/loading";
 // import Adverts from "../Footer/Adverts/Adverts";
 // import Newsletter from "../Footer/Newsletter/Newsletter";
 
