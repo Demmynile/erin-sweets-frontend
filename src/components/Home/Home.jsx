@@ -45,8 +45,8 @@ const Home = () => {
             <Banner />
             <div className="main-content">
                 <div className="layout">
-                    {isLoading ? (<Category headingText="Categories" categories={categories} />) : (< Loading />)  }
-                    {isLoading ? (<Products
+                    {!isLoading ? (<Category headingText="Categories" categories={categories} />) : (< Loading />)  }
+                    {!isLoading ? (<Products
                         headingText="Popular Products"
                         products={products}
                     />) : (< Loading />)}
