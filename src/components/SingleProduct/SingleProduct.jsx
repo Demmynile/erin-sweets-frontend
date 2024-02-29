@@ -20,6 +20,7 @@ const SingleProduct = () => {
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
     const {isLoading , changeLoadingState , handleAddToCart} = useContext(Context)
+    console.log(isLoading)
 
     const decrement = () => {
         setQuantity((prevState) => {
@@ -110,7 +111,7 @@ const SingleProduct = () => {
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
-                    />
+                />
                 {/* : 
                 (< Loading />)} */}
                 </div>
