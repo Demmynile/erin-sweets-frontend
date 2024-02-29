@@ -43,16 +43,15 @@ const SingleProduct = () => {
 
     if (!data) return;
 
-    
     const product =  data?.data?.[0]?.attributes;
-    console.log(isLoading)
+
 
     return (
         <>
             
           <div className="single-product-main-content">
                 <div className="layout">
-                {!isLoading ? 
+                {isLoading ? 
                 (<div className="single-product-page">
                         <div className="left">
                             <img
