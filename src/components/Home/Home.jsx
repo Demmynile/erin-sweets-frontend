@@ -22,7 +22,9 @@ const Home = () => {
     const getProducts = () => {
         
         fetchDataFromApi("/api/products?populate=*").then((res) => {
-            changeLoadingState(false)
+            if (res) {
+                changeLoadingState(false)
+            }
             setProducts(res);
             
         });
@@ -30,7 +32,9 @@ const Home = () => {
     const getCategories = () => {
         
         fetchDataFromApi("/api/categories?populate=*").then((res) => {
-            changeLoadingState(false)
+            if (res) {
+                changeLoadingState(false)
+            }
             setCategories(res);
             
         });
