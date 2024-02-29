@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState , useEffect } from "react";
 import { Context } from "../../utils/context";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
@@ -16,10 +16,17 @@ import { formatNumber } from "../../utils/currency";
 import { Loading } from "../misc/loading";
 
 const SingleProduct = () => {
+
+   
+
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
     const {isLoading , changeLoadingState , handleAddToCart} = useContext(Context)
+
+    useEffect(() => {
+         changeLoadingState(true)
+    })
 
     const decrement = () => {
         setQuantity((prevState) => {
