@@ -25,10 +25,7 @@ const SingleProduct = () => {
     useEffect(() => {
          changeLoadingState(true)
 
-         if(data){
-            changeLoadingState(false)
-            
-        }
+         
     })
 
     const decrement = () => {
@@ -40,7 +37,9 @@ const SingleProduct = () => {
     const increment = () => {
         setQuantity((prevState) => prevState + 1);
     };
-
+    if(data){
+        changeLoadingState(false)
+    }
     if (!data) return;
 
     const product =  data?.data?.[0]?.attributes;
