@@ -6,7 +6,7 @@ import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 import {useAuth0} from '@auth0/auth0-react'
-import { Loading } from "../../utils/loading";
+import { Loading } from "../misc/loading";
 // import Adverts from "../Footer/Adverts/Adverts";
 // import Newsletter from "../Footer/Newsletter/Newsletter";
 
@@ -20,17 +20,19 @@ const Home = () => {
     }, []);
 
     const getProducts = () => {
-        changeLoadingState(false)
+        
         fetchDataFromApi("/api/products?populate=*").then((res) => {
+            changeLoadingState(false)
             setProducts(res);
-            changeLoadingState(true)
+            
         });
     };
     const getCategories = () => {
-        changeLoadingState(false)
+        
         fetchDataFromApi("/api/categories?populate=*").then((res) => {
-            setCategories(res);
             changeLoadingState(false)
+            setCategories(res);
+            
         });
     };
 
