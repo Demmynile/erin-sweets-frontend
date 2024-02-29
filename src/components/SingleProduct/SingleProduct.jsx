@@ -47,7 +47,8 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                {!isLoading ? (<div className="single-product-page">
+                {!isLoading ? 
+                (<div className="single-product-page">
                         <div className="left">
                             <img
                                 src={
@@ -101,11 +102,17 @@ const SingleProduct = () => {
                                 </span>
                             </div>
                         </div>
-                    </div>) : (<Loading />)}
-                    {!isLoading ? (<RelatedProducts
+                </div>) 
+                : 
+                (<Loading />)
+                }
+                {/* {!isLoading ?  */}
+                (<RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
-                    />) : (< Loading />)}
+                    />) 
+                {/* : 
+                (< Loading />)} */}
                 </div>
              </div>
             
