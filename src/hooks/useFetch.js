@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchDataFromApi } from "../utils/api";
 const useFetch = (endpoint) => {
     const [data, setData] = useState();
+    const [loading , setLoading ] = useState(true)
 
     useEffect(() => {
         makeApiCall();
@@ -10,8 +11,9 @@ const useFetch = (endpoint) => {
     const makeApiCall = async () => {
         const res = await fetchDataFromApi(endpoint);
         setData(res);
+        setLoading(false)
     };
 
-    return { data };
+    return { data , loading };
 };
 export default useFetch;

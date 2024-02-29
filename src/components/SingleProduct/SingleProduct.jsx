@@ -19,14 +19,10 @@ const SingleProduct = () => {
     
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
-    const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+    const { data , loading } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
     const {isLoading , changeLoadingState , handleAddToCart} = useContext(Context)
 
-    useEffect(() => {
-         changeLoadingState(true)
-
-         
-    })
+    
 
     const decrement = () => {
         setQuantity((prevState) => {
@@ -50,7 +46,7 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                {isLoading ? 
+                {!loading ? 
                 (<div className="single-product-page">
                         <div className="left">
                             <img
