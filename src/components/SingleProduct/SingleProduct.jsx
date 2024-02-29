@@ -107,10 +107,10 @@ const SingleProduct = () => {
                 (<Loading />)
                 }
                 {/* {!isLoading ?  */}
-                (<RelatedProducts
+                <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
-                    />) 
+                    />
                 {/* : 
                 (< Loading />)} */}
                 </div>
