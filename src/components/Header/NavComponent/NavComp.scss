@@ -88,12 +88,12 @@
     
     .sub-container {
       .nav-list {
-         display: flex;
-         gap: 9rem;
-         align-content: center;
-         justify-content: center;
+        display: flex;
+        gap: 9rem;
+        align-content: center;
+        justify-content: center;
 
-         .easter{
+        .easter{
           
             a {
                text-decoration: none;
@@ -121,7 +121,7 @@
             &:hover{
                color : #ED92B9; 
             }
-        }
+          }
         .afternoon{
             
             a {
@@ -133,17 +133,17 @@
                 }
                
            }
-        }
+         }
         .hamper{
             color : #212121;
    
             &:hover{
                color : #ED92B9; 
             }
-        }
+         }
         .gift{
             color : #212121;
-        }
+         }
         .cakes{
             
             a {
@@ -160,7 +160,9 @@
             &:hover{
                color : #ED92B9; 
             }
-        }
+         }
+
+        
       }
     
     
@@ -194,6 +196,7 @@
         color : #212121;
         cursor : pointer;
         gap: 2rem;
+
         .easter{
           
             a {

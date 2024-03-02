@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-content">
-                <div className="col">
+                {/* <div className="col">
                     <div className="title">About</div>
                     <div className="text">
                     Introducing Erin's Sweet Treats, where sweetness knows no bounds and every bite is a celebration of indulgence. 
@@ -14,24 +14,8 @@ const Footer = () => {
                     With a passion for baking that runs as deep as the warm aroma of freshly baked goods, 
                     Erin's Sweet Treats is more than just a bakery—it's a destination for culinary enchantment.
                     </div>
-                </div>
-                <div className="col">
-                    <div className="title">Contact</div>
-                    <div className="c-item">
-                        <FaLocationArrow />
-                        <div className="text">
-                            52,Bampton Street EX16 6AH
-                        </div>
-                    </div>
-                    <div className="c-item">
-                        <FaMobileAlt />
-                        <div className="text">Phone: 0188490687</div>
-                    </div>
-                    <div className="c-item">
-                        <FaEnvelope />
-                        <div className="text">Email: info@erinsweettreats.com</div>
-                    </div>
-                </div>
+                </div> */}
+               
                 <div className="col">
                     <div className="title">Categories</div>
                     <span className="text">New In</span>
@@ -50,6 +34,24 @@ const Footer = () => {
                     <span className="text">Promo</span>
                     <span className="text">Categories</span>
                     <span className="text">Contact</span>
+                </div>
+
+                <div className="col">
+                    <div className="title">Contact</div>
+                    <div className="c-item">
+                        <FaLocationArrow />
+                        <div className="text">
+                            52,Bampton Street EX16 6AH
+                        </div>
+                    </div>
+                    <div className="c-item">
+                        <FaMobileAlt />
+                        <div className="text">Phone: 0188490687</div>
+                    </div>
+                    <div className="c-item">
+                        <FaEnvelope />
+                        <div className="text">Email: info@erinsweettreats.com</div>
+                    </div>
                 </div>
             </div>
             <div className="bottom-bar">
