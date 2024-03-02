@@ -9,7 +9,7 @@ const NavComp = ({isMobile }) => {
        <div className={isMobile ? 'mob-container' : 'main-container'}>
           <div className="sub-container">
              <div className='nav-list '>
-               <li className='easter'><a href="https://erin-sweets-frontend.vercel.app/category/5" /> Easter</li>  
+               <li className='easter'><a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a></li>  
                <li  className='mother'><a href="https://erin-sweets-frontend.vercel.app/category/6" />Mother's Day</li>  
                <li  className='afternoon'><a href="https://erin-sweets-frontend.vercel.app/category/8" />Afternoon Tea</li>  
                {/* <li  className='hamper'>Hamper and Gift Boxes</li>   */}
