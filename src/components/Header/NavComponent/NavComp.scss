@@ -101,6 +101,13 @@
       }
      .easter{
          color : #212121;  
+         a {
+            text-decoration: none;
+            color:#212121;
+            cursor : pointer;
+
+            
+        }
            
          &:hover{
             color : #ED92B9; 
@@ -109,6 +116,13 @@
     
      .mother{
          color : #212121;
+         a {
+            text-decoration: none;
+            color:#212121;
+            cursor : pointer;
+
+            
+        }
 
          &:hover{
             color : #ED92B9; 
@@ -116,6 +130,15 @@
      }
      .afternoon{
          color : #212121;
+         a {
+            text-decoration: none;
+            color:#212121;
+            cursor : pointer;
+            &:hover{
+                color : #ED92B9; 
+             }
+            
+        }
      }
      .hamper{
          color : #212121;
@@ -129,6 +152,16 @@
      }
      .cakes{
          color : #212121;
+         a {
+            text-decoration: none;
+            color:#212121;
+            cursor : pointer;
+            &:hover{
+                color : #ED92B9; 
+             }
+            
+        }
+         
 
          &:hover{
             color : #ED92B9; 
