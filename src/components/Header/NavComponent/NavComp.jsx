@@ -25,11 +25,19 @@ const NavComp = ({isMobile }) => {
       {isMobile && 
         <div className='mob-nav'>
             <div className='mob-list'>
-               <div className='easter'>Easter</div>  
-               <div className='mother'>Mother's Day</div>  
-               <div  className='hamper'>Hamper and Gift Boxes</div>     
-               <div  className='cakes'>Cakes</div>  
-               <div  className='tea'>Tea and Coffee</div>  
+               <div className='easter'>
+                  <a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a>
+                </div>  
+               <div className='mother'>
+                <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
+              </div>  
+               <div  className='afternoon'>
+                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Afternoon Tea</a>
+                </div>     
+               <div  className='cakes'>
+                  <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
+               </div>  
+                 
             </div>
             <div className='socials-nav'>
                     
