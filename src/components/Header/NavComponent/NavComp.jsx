@@ -20,7 +20,7 @@ const NavComp = ({isMobile }) => {
                <li  className='corporate'>Corporate Gift</li>   */}
             </div>
           </div>
-       </div> s
+       </div>
   
       {isMobile && 
         <div className='mob-nav'>
