@@ -92,81 +92,78 @@
          gap: 9rem;
          align-content: center;
          justify-content: center;
-      }
-      li {
-         list-style-type: none;
-         padding: 0; /* Optional: remove default padding */
-         margin: 0; /* Optional: remove default margin */
-         cursor : pointer;
-      }
-     .easter{
+
+         .easter{
           
-         a {
-            text-decoration: none;
-            color:#212121;
-            cursor : pointer;
-
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+   
+               
+           }
+              
+            &:hover{
+               color : #ED92B9; 
+            }
+          }
+       
+        .mother{
             
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+   
+               
+           }
+   
+            &:hover{
+               color : #ED92B9; 
+            }
         }
-           
-         &:hover{
-            color : #ED92B9; 
-         }
-     }
+        .afternoon{
+            
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+               &:hover{
+                   color : #ED92B9; 
+                }
+               
+           }
+        }
+        .hamper{
+            color : #212121;
+   
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+        .gift{
+            color : #212121;
+        }
+        .cakes{
+            
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+               &:hover{
+                   color : #ED92B9; 
+                }
+               
+           }
+            
+   
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+      }
     
-     .mother{
-         
-         a {
-            text-decoration: none;
-            color:#212121;
-            cursor : pointer;
-
-            
-        }
-
-         &:hover{
-            color : #ED92B9; 
-         }
-     }
-     .afternoon{
-         
-         a {
-            text-decoration: none;
-            color:#212121;
-            cursor : pointer;
-            &:hover{
-                color : #ED92B9; 
-             }
-            
-        }
-     }
-     .hamper{
-         color : #212121;
-
-         &:hover{
-            color : #ED92B9; 
-         }
-     }
-     .gift{
-         color : #212121;
-     }
-     .cakes{
-         
-         a {
-            text-decoration: none;
-            color:#212121;
-            cursor : pointer;
-            &:hover{
-                color : #ED92B9; 
-             }
-            
-        }
-         
-
-         &:hover{
-            color : #ED92B9; 
-         }
-     }
+    
     
       
     }
