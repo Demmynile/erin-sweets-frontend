@@ -58,7 +58,9 @@ const Header = ({isMobile , setIsMobile}) => {
                 className={`main-header ${scrolled ? "sticky-header" : ""}`}  
             >
                 <div className="header-content">
+                   
                     <ul className="left">
+                    
                         <li onClick={() => navigate("/")}>Home</li>
         
                     </ul>
@@ -81,12 +83,13 @@ const Header = ({isMobile , setIsMobile}) => {
                             <CgShoppingCart />
                             {!!cartCount && <span>{cartCount}</span>}
                         </span>
-                       
                         {isMobile ?
                          (<MdOutlineCancel  onClick={() => setIsMobile(!isMobile)} className={isMobile ? 'mob' :  'desk'}/>)
                            : 
                          (<RxHamburgerMenu  onClick={() => setIsMobile(!isMobile)} className={isMobile ? 'mob' :  'desk'}/>)
-                         }
+                        }
+                   
+                       
                     </div>
                 </div>
             </header>
