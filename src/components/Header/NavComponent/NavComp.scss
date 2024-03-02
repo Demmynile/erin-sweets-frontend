@@ -167,19 +167,7 @@
             color : #ED92B9; 
          }
      }
-     .chocolates{
-         color : #212121;
-     .tea{
-         color : #212121;
-
-         &:hover{
-            color : #ED92B9; 
-         }
-     }
-     .corporate{
-         color : #212121;
-     }
- }
+    
       
     }
    
@@ -209,6 +197,77 @@
         color : #212121;
         cursor : pointer;
         gap: 2rem;
+        .easter{
+          
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+   
+               
+           }
+              
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+       
+        .mother{
+            
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+   
+               
+           }
+   
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+        .afternoon{
+            
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+               &:hover{
+                   color : #ED92B9; 
+                }
+               
+           }
+        }
+        .hamper{
+            color : #212121;
+   
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+        .gift{
+            color : #212121;
+        }
+        .cakes{
+            
+            a {
+               text-decoration: none;
+               color:#212121;
+               cursor : pointer;
+               &:hover{
+                   color : #ED92B9; 
+                }
+               
+           }
+            
+   
+            &:hover{
+               color : #ED92B9; 
+            }
+        }
+       
+
+
     }
     .socials-nav{
         display: flex;
