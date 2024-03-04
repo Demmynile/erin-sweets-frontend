@@ -14,16 +14,17 @@
     display : flex;
    }
    .sub-container {
-     .nav-list {
         display: flex;
-        gap: 10rem;
+        gap: 17rem;
         align-content: center;
         justify-content: center;
-
+        width: 100%;
 
         .easter{
             
             font-size: 1.18rem;   
+            padding: 1.5rem;
+            cursor: pointer;
             
             a {
                 text-decoration: none;
@@ -34,7 +35,8 @@
         .mother{
             
             font-size: 1.18rem;
-
+            padding: 1.5rem;
+            cursor: pointer;
             a {
                 text-decoration: none;
                 color : #212121;
@@ -42,30 +44,45 @@
         }
         .afternoon{
             font-size: 1.18rem;
-
+            padding: 1.5rem;
+            cursor: pointer;
             a {
                 text-decoration: none;
                 color : #212121;
 
             }
         }
-        // .hamper{
-        //     color : #212121;
-        // }
+       
         .gift{
             
             font-size: 1.18rem;
-
+            padding: 1.5rem;
+            cursor: not-allowed;
             a {
                 text-decoration: none;
                 color : #212121;
+                
 
             }
         }
-        .cakes{
+        .choco{
             
             font-size: 1.18rem;
+            padding: 1.5rem;
+            cursor: not-allowed;
+            a {
+                text-decoration: none;
+                color : #212121;
+                opacity : 0.3;
+                
 
+            }
+        }
+        .bam{
+            
+            font-size: 1.18rem;
+            padding: 1.5rem;
+            cursor: pointer;
             a {
                 text-decoration: none;
                 color : #212121;
@@ -78,7 +95,7 @@
   
     }
      
-}
+
   
 
 .mob-container {

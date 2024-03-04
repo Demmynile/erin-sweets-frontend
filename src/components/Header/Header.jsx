@@ -16,7 +16,7 @@ import logo from '../../assets/Untitled_design_.png'
 
 const Header = ({isMobile , setIsMobile}) => {
     const { loginWithRedirect , isAuthenticated , logout} = useAuth0()
-    console.log(isAuthenticated)
+   
 
 
     const [scrolled, setScrolled] = useState(false);
