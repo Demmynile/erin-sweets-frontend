@@ -3,6 +3,7 @@ import "./Category.scss";
 
 
 const Category = ({ categories , innerPage, headingText }) => {
+    console.log(categories)
     const navigate = useNavigate();
     return (
         <div className="shop-by-category">
