@@ -10,6 +10,10 @@
         @include md {
             max-width: 1200px;
         }
+        .prodLoad {
+            margin-top : 8rem;
+            font-size : 3rem
+        }
         .single-product-page {
             display: flex;
             flex-direction: column;

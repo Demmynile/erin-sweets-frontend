@@ -101,7 +101,7 @@ const SingleProduct = () => {
                         </div>
                 </div> 
                 : 
-                <Loading /> 
+                <div className="prodLoad"><h1>Loading ...</h1> </div>
                 }
                 {product ? 
                 <RelatedProducts
@@ -109,7 +109,7 @@ const SingleProduct = () => {
                         categoryId={product?.categories?.data[0]?.id}
                 />
                 : 
-                < Loading />
+                <div className="prodLoad"><h1>Loading ...</h1> </div>
                 } 
                 </div>
              </div>
