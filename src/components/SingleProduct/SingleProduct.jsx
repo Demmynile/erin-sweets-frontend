@@ -19,8 +19,8 @@ const SingleProduct = () => {
     
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
-    const { data , loading } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
-    const { handleAddToCart} = useContext(Context)
+    const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+    
 
     
 
@@ -44,7 +44,7 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                { data ? 
+                { product ? 
                 <div className="single-product-page">
                         <div className="left">
                             <img
@@ -99,14 +99,18 @@ const SingleProduct = () => {
                                 </span>
                             </div>
                         </div>
-                </div> : <Loading /> }
-                {data ? 
+                </div> 
+                : 
+                <Loading /> 
+                }
+                {product ? 
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
                 />
                 : 
-                (< Loading />)} 
+                < Loading />
+                } 
                 </div>
              </div>
             
