@@ -8,17 +8,19 @@ const Category = () => {
     const { data } = useFetch(
         `/api/products?populate=*&[filters][categories][id]=${id}`
     );
-    console.log(data)
+
     return (
         <div href='#categories' className="category-main-content">
            {
-           !data ? 
-           <Loading /> : <div className="layout">
-                <div className="category-title">
-                     {id == 5 && data  ? `Easter Day` : id == 6 && data  ? `Mother's Day` : id == 7 && data  ? 'Cakes' : id == 8 && data  ? 'Afternoon Tea' : null}
-                </div>
-                <Products innerPage={true} products={data} />
-            </div> } 
+          data ?
+          
+        <div className="layout">
+            <div className="category-title">
+                {id == 5 && data  ? `Easter Day` : id == 6 && data  ? `Mother's Day` : id == 7 && data  ? 'Cakes' : id == 8 && data  ? 'Afternoon Tea' : null}
+            </div>
+            <Products innerPage={true} products={data} />
+        </div> 
+           : <Loading /> } 
         </div>
     );
 };
