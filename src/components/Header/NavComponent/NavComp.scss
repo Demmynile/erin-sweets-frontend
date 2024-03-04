@@ -19,46 +19,85 @@
         gap: 10rem;
         align-content: center;
         justify-content: center;
-     }
-     li {
-        list-style-type: none;
-        padding: 0; /* Optional: remove default padding */
-        margin: 0; /* Optional: remove default margin */
-       
 
-        a {
-            text-decoration: none;
-            color:#212121;
-            cursor : pointer;
 
+        .easter{
             
+            font-size: 1.18rem;   
+            
+            a {
+                text-decoration: none;
+                color : #212121;
+
+                &:hover{
+                    color: #ED92B9;
+                }
+
+            }
         }
-        
+        .mother{
+            color : #212121;
+            font-size: 1.18rem;
+
+            a {
+                text-decoration: none;
+                color : #212121;
+
+                &:hover{
+                    color: #ED92B9;
+                }
+
+            }
+        }
+        .afternoon{
+            color : #212121;
+            font-size: 1.18rem;
+
+            a {
+                text-decoration: none;
+                color : #212121;
+
+                &:hover{
+                    color: #ED92B9;
+                }
+
+            }
+        }
+        // .hamper{
+        //     color : #212121;
+        // }
+        .gift{
+            color : #212121;
+            font-size: 1.18rem;
+
+            a {
+                text-decoration: none;
+                color : #212121;
+
+                &:hover{
+                    color: #ED92B9;
+                }
+
+            }
+        }
+        .cakes{
+            color : #212121;
+            font-size: 1.18rem;
+
+            a {
+                text-decoration: none;
+                color : #212121;
+
+                &:hover{
+                    color: #ED92B9;
+                }
+
+            }
+        }
+       
      }
-    .easter{
-        color : #212121;
-        font-size: 1.18rem;      
-    }
-    .mother{
-        color : #212121;
-        font-size: 1.18rem;
-    }
-    .afternoon{
-        color : #212121;
-        font-size: 1.18rem;
-    }
-    // .hamper{
-    //     color : #212121;
-    // }
-    .gift{
-        color : #212121;
-        font-size: 1.18rem;
-    }
-    .cakes{
-        color : #212121;
-        font-size: 1.18rem;
-    }
-    .chocolates{
+     
+  
         color : #212121;
     .tea{
         color : #212121;
@@ -71,7 +110,6 @@
    }
   
 
-}
 .mob-container {
     display: none;
     justify-content: center;
@@ -93,8 +131,15 @@
         align-content: center;
         justify-content: center;
 
-        a {
-            text-decoration: none;
+        .easter,
+        .mother,
+        .afternoon,
+        .gift,
+        .cakes {
+            a {
+                text-decoration: none;
+                color: #212121;
+            }
         }
 
         
