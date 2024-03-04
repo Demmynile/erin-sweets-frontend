@@ -40,12 +40,12 @@ const SingleProduct = () => {
     console.log(product)
 
     return (
-        <>
+    
             
           <div className="single-product-main-content">
                 <div className="layout">
-                {loading ? (<Loading />) :
-                (<div className="single-product-page">
+                { data ? 
+                <div className="single-product-page">
                         <div className="left">
                             <img
                                 src={
@@ -99,18 +99,18 @@ const SingleProduct = () => {
                                 </span>
                             </div>
                         </div>
-                </div>) }
-                {/* {!isLoading ?  */}
+                </div> : <Loading /> }
+                {data ? 
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
                 />
-                {/* : 
-                (< Loading />)} */}
+                : 
+                (< Loading />)} 
                 </div>
              </div>
             
-        </>
+       
        
     );
 };

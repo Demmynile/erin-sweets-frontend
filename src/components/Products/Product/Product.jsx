@@ -5,6 +5,8 @@ import { formatNumber } from "../../../utils/currency";
 
 const Product = ({ data, id }) => {
     const navigate = useNavigate();
+
+
     return (
         <div
             className="product-card"
