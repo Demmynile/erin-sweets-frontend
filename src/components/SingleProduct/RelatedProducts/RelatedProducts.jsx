@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../../../hooks/useFetch";
 import Products from "../../Products/Products";
+import { Loading } from "../../misc/loading";
 
 const RelatedProducts = ({ categoryId, productId }) => {
     const { data } = useFetch(
@@ -8,9 +9,16 @@ const RelatedProducts = ({ categoryId, productId }) => {
     );
 
     return (
-        <div className="related-products">
-            <Products headingText="Related Products" products={data} />
+        <div>
+            {data ?
+             <div className="related-products">
+                <Products headingText="Related Products" products={data} />
+            </div> 
+            : 
+            <Loading /> 
+            }
         </div>
+       
     );
 };
 
