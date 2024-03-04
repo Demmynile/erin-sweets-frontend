@@ -8,12 +8,12 @@ const NavComp = ({isMobile }) => {
 
        <div className={isMobile ? 'mob-container' : 'main-container'}>
           <div className="sub-container">
-             <div className='nav-list '>
+             <div className='nav-list'>
                <div className='easter'><a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a></div>  
                <div  className='mother'><a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a></div>  
-               <div className='afternoon'><a href="https://erin-sweets-frontend.vercel.app/category/8">Afternoon Tea</a></div>  
+               <div className='afternoon'><a href="https://erin-sweets-frontend.vercel.app/category/8">Tea</a></div>  
                {/* <li  className='hamper'>Hamper and Gift Boxes</li>   */}
-               <div  className='gift'>Gift Ideas</div>     
+               <div  className='gift'><a href="https://erin-sweets-frontend.vercel.app/category/8">Gift Ideas</a></div>     
                <div  className='cakes'><a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a></div>  
                {/* <li  className='chocolates'>Chocolates</li>   */}
                {/* <li  className='tea'>Tea and Coffee</li>  
@@ -32,8 +32,11 @@ const NavComp = ({isMobile }) => {
                 <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
               </div>  
                <div  className='afternoon'>
-                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Afternoon Tea</a>
-                </div>     
+                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Tea</a>
+                </div>
+                <div  className='gift'>
+                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Gift Ideas</a>
+                </div>      
                <div  className='cakes'>
                   <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
                </div>  
