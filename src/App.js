@@ -11,6 +11,8 @@ import AppContext from "./utils/context";
 import {Auth0Provider} from '@auth0/auth0-react'
 import { Toaster } from "react-hot-toast";
 import {PayPalScriptProvider} from '@paypal/react-paypal-js'
+import Gallery from "./components/Gallery/Gallery";
+import Hire from "./components/Hire/Hire";
 // import Partners from "./components/Footer/Partners/Partners";
 // import Adverts from "./components/Footer/Adverts/Adverts";
 

@@ -20,7 +20,7 @@ const SingleProduct = () => {
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
-    
+    const { handleAddToCart} = useContext(Context)
 
     
 
@@ -34,7 +34,7 @@ const SingleProduct = () => {
         setQuantity((prevState) => prevState + 1);
     };
 
-    
+    if (!data) return;
 
     const product =  data?.data?.[0]?.attributes;
     console.log(product)
@@ -103,7 +103,7 @@ const SingleProduct = () => {
                 : 
                 <Loading /> 
                 }
-                {prod ? 
+                {product ? 
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
