@@ -9,16 +9,11 @@ const RelatedProducts = ({ categoryId, productId }) => {
     );
 
     return (
-        <div>
-            {!data
-             ? 
-             <Loading /> 
-             : 
-             <div className="related-products">
+
+            <div className="related-products">
                 <Products headingText="Related Products" products={data} />
             </div>  
-            }
-        </div>
+          
        
     );
 };
