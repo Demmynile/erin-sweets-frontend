@@ -10,12 +10,13 @@ const RelatedProducts = ({ categoryId, productId }) => {
 
     return (
         <div>
-            {data ?
+            {!data
+             ? 
+             <Loading /> 
+             : 
              <div className="related-products">
                 <Products headingText="Related Products" products={data} />
-            </div> 
-            : 
-            <Loading /> 
+            </div>  
             }
         </div>
        
