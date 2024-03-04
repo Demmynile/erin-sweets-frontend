@@ -44,7 +44,7 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                { data ? 
+                { product ? 
                 <div className="single-product-page">
                         <div className="left">
                             <img
@@ -103,7 +103,7 @@ const SingleProduct = () => {
                 : 
                 <Loading /> 
                 }
-                {data ? 
+                {prod ? 
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}

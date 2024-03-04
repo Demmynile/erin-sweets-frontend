@@ -1,7 +1,9 @@
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { useNavigate } from "react-router-dom";
 import './NavComp.scss'
 
 const NavComp = ({isMobile }) => {
+  const navigate = useNavigate()
 
   function func1() {
     // Navigate to the link destination
@@ -51,11 +53,11 @@ const NavComp = ({isMobile }) => {
                <div className='mother'>
                 <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
               </div>  
-               <div  className='afternoon'>
-                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Tea</a>
+               <div  className='afternoon' onClick = {() => navigate('/gallery')}>
+                    <a>Gallery</a>
               </div>
-                <div  className='gift'>
-                    <a href="https://erin-sweets-frontend.vercel.app/category/8">Gift Ideas</a>
+                <div  className='gift' onClick = {() => navigate('/hire')}>
+                    <a>Hire</a>
                 </div>      
                <div  className='cakes'>
                   <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
