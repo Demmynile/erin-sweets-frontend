@@ -7,10 +7,10 @@ const NavComp = ({isMobile }) => {
     // Navigate to the link destination
     window.location.href = "https://erin-sweets-frontend.vercel.app/category/5";
   }
-  function func2() {
-    // Navigate to the link destination
-    window.location.href = "https://erin-sweets-frontend.vercel.app/category/8";
-  }
+  // function func2() {
+  //   // Navigate to the link destination
+  //   window.location.href = "https://erin-sweets-frontend.vercel.app/category/8";
+  // }
   function func3() {
     // Navigate to the link destination
     window.location.href = "https://erin-sweets-frontend.vercel.app/category/7/";
