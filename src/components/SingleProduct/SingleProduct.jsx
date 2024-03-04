@@ -34,7 +34,7 @@ const SingleProduct = () => {
         setQuantity((prevState) => prevState + 1);
     };
 
-    if (!data) return;
+    
 
     const product =  data?.data?.[0]?.attributes;
     console.log(product)
@@ -44,7 +44,7 @@ const SingleProduct = () => {
             
           <div className="single-product-main-content">
                 <div className="layout">
-                { product ? 
+                { data ? 
                 <div className="single-product-page">
                         <div className="left">
                             <img
@@ -101,7 +101,7 @@ const SingleProduct = () => {
                         </div>
                 </div> 
                 : 
-                <div className="prodLoad"><h1>Loading ...</h1> </div>
+                <Loading /> 
                 }
                 {product ? 
                 <RelatedProducts
@@ -109,7 +109,7 @@ const SingleProduct = () => {
                         categoryId={product?.categories?.data[0]?.id}
                 />
                 : 
-                <div className="prodLoad"><h1>Loading ...</h1> </div>
+                < Loading />
                 } 
                 </div>
              </div>
