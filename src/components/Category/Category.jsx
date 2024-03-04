@@ -12,7 +12,7 @@ const Category = () => {
         <div href='#categories' className="category-main-content">
             <div className="layout">
                 <div className="category-title">
-                     {id == 5 ? `Easter Day` : id == 6 ? `Mother's Day` : id == 7 ? 'Cakes' : 'Afternoon Tea'}
+                     {id && data == 5 ? `Easter Day` : id && data == 6 ? `Mother's Day` : id && data == 7 ? 'Cakes' : 'Afternoon Tea'}
                 </div>
                 <Products innerPage={true} products={data} />
             </div>
