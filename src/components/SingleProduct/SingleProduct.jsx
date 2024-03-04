@@ -103,7 +103,7 @@ const SingleProduct = () => {
                 : 
                 <Loading /> 
                 }
-                {product ? 
+                {data ? 
                 <RelatedProducts
                         productId={id}
                         categoryId={product?.categories?.data[0]?.id}
