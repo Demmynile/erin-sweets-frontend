@@ -2,16 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Product.scss";
 import { formatNumber } from "../../../utils/currency";
-import { Loading } from "../../misc/loading";
 
 const Product = ({ data, id }) => {
     const navigate = useNavigate();
-
-
     return (
-    <div>
-     {data
-          ? 
         <div
             className="product-card"
             onClick={() => navigate("/product/" + id)}
@@ -28,11 +22,6 @@ const Product = ({ data, id }) => {
                 <span className="price">{formatNumber(data?.price)}</span>
             </div>
         </div>
-    :
-    <Loading /> 
-    }
-    </div> 
-       
     );
 };
 
