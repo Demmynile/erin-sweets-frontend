@@ -34,7 +34,7 @@ const SingleProduct = () => {
         setQuantity((prevState) => prevState + 1);
     };
 
-    if (!data) return;
+
 
     const product =  data?.data?.[0]?.attributes;
     console.log(product)
