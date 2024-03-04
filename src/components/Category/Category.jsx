@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Products from "../Products/Products";
 import "./Category.scss";
+import { Loading } from "../misc/loading";
 const Category = () => {
     const { id } = useParams();
     const { data } = useFetch(
@@ -10,12 +11,14 @@ const Category = () => {
     console.log(data)
     return (
         <div href='#categories' className="category-main-content">
-            <div className="layout">
+           {
+           !data ? 
+           <Loading /> : <div className="layout">
                 <div className="category-title">
                      {id == 5 && data  ? `Easter Day` : id == 6 && data  ? `Mother's Day` : id == 7 && data  ? 'Cakes' : id == 8 && data  ? 'Afternoon Tea' : null}
                 </div>
                 <Products innerPage={true} products={data} />
-            </div>
+            </div> } 
         </div>
     );
 };
