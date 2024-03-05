@@ -1,0 +1,31 @@
+.equal-size-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px; /* Adjust according to your need */
+    margin-top: 1rem;
+  
+    .image-item {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the entire space */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* For screens smaller than 768px (mobile devices) */
+      grid-template-columns: 1fr; /* Display as a single column */
+      grid-template-rows: repeat(16, 1fr); /* 16 rows */
+      margin-top: 1rem;
+      .image-item {
+        width: 100%;
+        height: auto; /* Equal height for each row */
+        margin-bottom: 7px; /* Adjust according to your need */
+      }
+    }
+  }
