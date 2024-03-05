@@ -35,6 +35,7 @@ const NavComp = ({isMobile }) => {
              
                <div className='easter'  onClick = {func1}><a>Easter</a></div> 
                <div  className='mother' onClick = {func2}><a>Mother's Day</a></div>  
+               <div  className='gift' ><a>Gifts </a></div>
                <div  className='bam'  onClick = {func3}><a>Cakes</a></div>
                <div  className='afternoon'  onClick = {func4}>
                     <a>Hire</a>
