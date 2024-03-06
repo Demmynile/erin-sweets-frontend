@@ -18,13 +18,18 @@ function Checkout() {
 
         const handleApprove = async() => {
             setPaidFor(true);
-            console.log(order)    
+            const res = await makePaymentRequest.post("/api/orders", {
+                products: order[0],
+            });   
+            return res
         }
+    
 
         if(paidFor){
             notification("Thank You for purchasing from Erin Sweets");
             setCartItems([])
-            setOrders(prevList => [...prevList, order])
+
+  
             
         }
 
@@ -32,7 +37,7 @@ function Checkout() {
         notification(error);
         }
 
-        console.log(orders)
+       
 
 
   return (
