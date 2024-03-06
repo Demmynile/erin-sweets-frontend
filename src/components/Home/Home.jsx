@@ -19,6 +19,7 @@ const Home = () => {
     useEffect(() => {
         getProducts();
         getCategories();
+        getOrders();
     }, []);
 
     const getProducts = () => {
@@ -41,6 +42,14 @@ const Home = () => {
             
         });
     };
+    const getOrders = () => {
+        
+        fetchDataFromApi("/api/orders?populate=*").then((res) => {
+            return res
+            
+        });
+    };
+
 
     return (
         <div>
