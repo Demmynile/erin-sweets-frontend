@@ -10,38 +10,15 @@ function Checkout() {
 
         const { cartSubTotal , setCartItems , cartItems } = useContext(Context);
 
-        // const purchaseUnits = cartItems.map(item => {
-        //     return {
-        //         amount: {
-        //             currency_code: 'GBP', // Sets the currency code to GBP (British Pound)
-        //             value: (item.attributes.price * item.attributes.quantity).toFixed(2), // Sets the total value of the purchase for each item
-        //         },
-        //     };
-        // });
         const [paidFor, setPaidFor] = useState(false);
         const [error, setError] = useState(null);
         const [order , setOrder] = useState({})
-        
-        const saveOrder = async() => {
-            
-            try {
-                const res = await makePaymentRequest.post("/api/orders", {
-                    products: cartItems,
-                });
-                console.log(res)
+        const [orders , setOrders] = useState([{}])
 
-            }
-            catch (err) {
-            console.log(err);
-           }
-        }
 
         const handleApprove = async() => {
-            saveOrder()
             setPaidFor(true);
-           
-
-            
+            console.log(order)    
         }
 
         if(paidFor){
