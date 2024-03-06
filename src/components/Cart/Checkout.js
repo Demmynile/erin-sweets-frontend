@@ -27,9 +27,7 @@ function Checkout() {
         if(paidFor){
             notification("Thank You for purchasing from Erin Sweets");
             setCartItems([])
-
-  
-            
+            console.log(order) 
         }
 
         if(error){
