@@ -2,12 +2,13 @@ import { PayPalButtons } from "@paypal/react-paypal-js"
 import { notification } from "../../utils/toast";
 import {useState , useContext} from 'react'
 import { Context } from "../../utils/context";
+import { makePaymentRequest } from "../../utils/api";
 
 
 
 function Checkout() {
 
-        const { cartSubTotal , setCartItems } = useContext(Context);
+        const { cartSubTotal , setCartItems , cartItems } = useContext(Context);
 
         // const purchaseUnits = cartItems.map(item => {
         //     return {
@@ -19,9 +20,26 @@ function Checkout() {
         // });
         const [paidFor, setPaidFor] = useState(false);
         const [error, setError] = useState(null);
+        
+        const saveOrder = async() => {
+            
+            try {
+                const res = await makePaymentRequest.post("/api/orders", {
+                    products: cartItems,
+                });
+                console.log(res)
 
-        const handleApprove = () => {
+            }
+            catch (err) {
+            console.log(err);
+           }
+        }
+
+        const handleApprove = async() => {
+            saveOrder()
             setPaidFor(true);
+           
+
             
         }
 

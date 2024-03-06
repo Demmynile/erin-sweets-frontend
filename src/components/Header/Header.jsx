@@ -16,6 +16,10 @@ import logo from '../../assets/Untitled_design_.png'
 
 const Header = ({isMobile , setIsMobile}) => {
     const { loginWithRedirect , isAuthenticated , logout} = useAuth0()
+
+    // if isAuthenticated{
+
+    // }
    
 
 
