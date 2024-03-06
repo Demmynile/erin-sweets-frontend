@@ -12,8 +12,8 @@ function Checkout() {
 
         const [paidFor, setPaidFor] = useState(false);
         const [error, setError] = useState(null);
-        const [order , setOrder] = useState({})
-        const [orders , setOrders] = useState([{}])
+        const [order , setOrder] = useState()
+        const [orders , setOrders] = useState([])
 
 
         const handleApprove = async() => {
@@ -24,12 +24,15 @@ function Checkout() {
         if(paidFor){
             notification("Thank You for purchasing from Erin Sweets");
             setCartItems([])
+            setOrders(prevList => [...prevList, order])
             
         }
 
         if(error){
         notification(error);
         }
+
+        console.log(orders)
 
 
   return (
@@ -64,7 +67,7 @@ function Checkout() {
     }}
     onApprove={async (data, actions) => {
         const order = await actions.order.capture(); // 'action' should be 'actions'
-        localStorage.setItem("order" , order)
+        setOrder(order)
         handleApprove(data.orderID);
     }}
     onCancel={() => {}}
