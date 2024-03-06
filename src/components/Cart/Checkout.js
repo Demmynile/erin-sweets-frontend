@@ -64,7 +64,7 @@ function Checkout() {
     }}
     onApprove={async (data, actions) => {
         const order = await actions.order.capture(); // 'action' should be 'actions'
-        setOrder(order)
+        localStorage.setItem("order" , order)
         handleApprove(data.orderID);
     }}
     onCancel={() => {}}
