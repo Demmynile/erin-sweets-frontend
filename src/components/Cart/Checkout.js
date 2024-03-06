@@ -13,7 +13,6 @@ function Checkout() {
         const [paidFor, setPaidFor] = useState(false);
         const [error, setError] = useState(null);
         const [order , setOrder] = useState()
-        const [orders , setOrders] = useState([])
 
 
         const handleApprove = async() => {
