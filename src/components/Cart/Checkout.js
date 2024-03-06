@@ -19,7 +19,7 @@ function Checkout() {
         const handleApprove = async() => {
             setPaidFor(true);
             const res = await makePaymentRequest.post("/api/orders", {
-                products: order[0],
+                products: order,
             });   
             return res
         }
