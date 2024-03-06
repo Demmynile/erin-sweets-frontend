@@ -8,7 +8,7 @@
         }
     }
     .others {
-        max-width: calc(100% - 20px);
+        max-width: 100%;
         margin: 0 auto;
         @include md {
             max-width: 100%
