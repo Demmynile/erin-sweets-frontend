@@ -4,7 +4,14 @@
         max-width: calc(100% - 20px);
         margin: 0 auto;
         @include md {
-            width: 100%;
+            max-width: 1200px;
+        }
+    }
+    .others {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 100%
         }
     }
 }

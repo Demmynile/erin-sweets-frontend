@@ -8,6 +8,7 @@ import { Context } from "../../utils/context";
 import {useAuth0} from '@auth0/auth0-react'
 import { Loading } from "../misc/loading";
 import Newsletter from "../Footer/Newsletter/Newsletter";
+import Partners from "../Footer/Partners/Partners";
 // import Adverts from "../Footer/Adverts/Adverts";
 // import Newsletter from "../Footer/Newsletter/Newsletter";
 
@@ -51,7 +52,12 @@ const Home = () => {
                         headingText="Popular Products"
                         products={products}
                     />) : (< Loading />)}
-                 <Newsletter />
+                 
+                </div>
+                <div className="others">
+                   <Partners />
+                   <Newsletter />
+                  
                 </div>
             </div>
         </div>
