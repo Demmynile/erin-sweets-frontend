@@ -1,8 +1,9 @@
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { useNavigate } from "react-router-dom";
+import { MdOutlineCancel } from "react-icons/md";
 import './NavComp.scss'
 
-const NavComp = ({isMobile }) => {
+const NavComp = ({isMobile , setIsMobile }) => {
   const navigate = useNavigate()
 
   function func1() {
@@ -49,23 +50,29 @@ const NavComp = ({isMobile }) => {
   
       {isMobile && 
         <div className='mob-nav'>
+              
             <div className='mob-list'>
-               <div className='easter'>
-                  <a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a>
-                </div>  
-               <div className='mother'>
-                <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
-              </div>  
-               <div  className='afternoon' onClick = {() => navigate('/gallery')}>
-                    <a>Gallery</a>
-              </div>
-                <div  className='gift' onClick = {() => navigate('/hire')}>
-                    <a>Hire</a>
-                </div>      
-               <div  className='cakes'>
-                  <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
-               </div>  
-                 
+            
+                  <div className='cancel'>
+                    <MdOutlineCancel  onClick={() => setIsMobile(!isMobile)} />
+                  </div>
+                  <div className='easter'>
+                      <a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a>
+                    </div>  
+                  <div className='mother'>
+                    <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
+                  </div>  
+                  <div  className='afternoon' onClick = {() => navigate('/gallery')}>
+                        <a>Gallery</a>
+                  </div>
+                    <div  className='gift' onClick = {() => navigate('/hire')}>
+                        <a>Hire</a>
+                    </div>      
+                  <div  className='cakes'>
+                      <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
+                  </div>  
+     
+                
             </div>
             <div className='socials-nav'>
                     

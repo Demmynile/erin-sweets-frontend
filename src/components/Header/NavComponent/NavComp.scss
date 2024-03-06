@@ -114,6 +114,7 @@
         display: flex;
     }
     
+    
     .sub-container {
       .nav-list {
         display: flex;
@@ -144,7 +145,7 @@
     background-color: white;
     width : 100%;
     z-index : 99%;
-    height: 29rem;
+    height: 100vh;
     @include md {
         display: none;
     }
@@ -159,6 +160,13 @@
         color : #212121;
         cursor : pointer;
         gap: 2rem;
+
+        .cancel {
+           font-size: 2.5rem;
+           color: #212121;
+          
+        }
+        
 
         .easter{
             
