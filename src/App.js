@@ -44,7 +44,7 @@ function App() {
                 </Routes>
                 {/* <Partners /> */}
                
-                <Newsletter />
+               
                 <Footer />
             </AppContext>
         </Auth0Provider>

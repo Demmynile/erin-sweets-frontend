@@ -4,7 +4,7 @@
         max-width: calc(100% - 20px);
         margin: 0 auto;
         @include md {
-            max-width: 1200px;
+            width: 100%;
         }
     }
 }

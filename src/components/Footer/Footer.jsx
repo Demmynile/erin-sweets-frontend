@@ -17,21 +17,15 @@ const Footer = () => {
                 </div> */}
                
                 <div className="col">
-                    <div className="title">Categories</div>
-                    <span className="text">New In</span>
-                    <span className="text">Valentine Special</span>
+                     <div className="title">Links</div>
                     <span className="text">Easter</span>
-                    <span className="text">Afternoon Tea</span>
-                    <span className="text">Hamper & Gift Boxes</span>
+                    <span className="text">Mother's Day</span>
                     <span className="text">Cakes</span>
-                    <span className="text">Chocolates</span>
-                    <span className="text">Tea and Coffee</span>
-                    <span className="text">Coperate Gifts</span>
-                   
+                    <span className="text">Hire</span>
+                    <span className="text">Gallery</span>  
                 </div>
                 <div className="col">
                     <div className="title">Pages</div>
-                    <span className="text">Promo</span>
                     <span className="text">Categories</span>
                     <span className="text">Contact</span>
                 </div>
@@ -41,7 +35,7 @@ const Footer = () => {
                     <div className="c-item">
                         <FaLocationArrow />
                         <div className="text">
-                            52,Bampton Street EX16 6AH
+                            58,Bampton Street EX16 6AH
                         </div>
                     </div>
                     <div className="c-item">
