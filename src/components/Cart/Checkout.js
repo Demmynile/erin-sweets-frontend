@@ -26,7 +26,7 @@ function Checkout() {
             
             try {
                 const res = await makePaymentRequest.post("/api/orders", {
-                    products: order,
+                    products: order.payer,
                 });
                 console.log(res)
 
