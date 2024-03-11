@@ -13,13 +13,13 @@ function Checkout() {
         const [paidFor, setPaidFor] = useState(false);
         const [error, setError] = useState(null);
         const [order , setOrder] = useState()
-
+        console.log(cartItems)
 
         const handleApprove = async() => {
+
             setPaidFor(true);
-            console.log(order)
             const res = await makePaymentRequest.post("/api/orders", {
-                products: order,
+                products: cartItems,
             });   
             return res
         }
