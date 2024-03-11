@@ -16,7 +16,8 @@ function Checkout() {
 
 
         const handleApprove = async() => {
-            setPaidFor(true);
+            // setPaidFor(true);
+            console.log(order)
             const res = await makePaymentRequest.post("/api/orders", {
                 products: order,
             });   
