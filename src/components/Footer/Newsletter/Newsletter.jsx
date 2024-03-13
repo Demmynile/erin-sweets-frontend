@@ -1,11 +1,11 @@
 import React from "react";
 import {
     FaFacebookF,
-    FaTwitter,
     FaInstagram,
-    FaLinkedinIn,
+
 } from "react-icons/fa";
 import "./Newsletter.scss";
+
 const Newsletter = () => {
     return (
         <div className="newsletter-section">

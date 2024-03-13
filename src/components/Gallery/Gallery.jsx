@@ -25,7 +25,7 @@ const Gallery = () => {
     <div className="equal-size-gallery">
       {images.map((imageUrl, index) => (
         <div className="image-item" key={index}>
-          <img src={imageUrl} alt={`Image ${index + 1}`} />
+          <img src={imageUrl} alt="banner-images" />
         </div>
       ))}
     </div>

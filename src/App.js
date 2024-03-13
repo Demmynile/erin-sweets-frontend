@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
-import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
 import {Auth0Provider} from '@auth0/auth0-react'
 import { Toaster } from "react-hot-toast";
@@ -43,9 +42,7 @@ function App() {
                     <Route path="/hire" element={<Hire />} />
                 </Routes>
                 {/* <Partners /> */}
-               
-               
-                <Footer />
+               <Footer />
             </AppContext>
         </Auth0Provider>
         </PayPalScriptProvider>

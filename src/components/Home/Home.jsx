@@ -5,7 +5,6 @@ import Category from "./Category/Category";
 import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
-import {useAuth0} from '@auth0/auth0-react'
 import { Loading } from "../misc/loading";
 import Newsletter from "../Footer/Newsletter/Newsletter";
 import Partners from "../Footer/Partners/Partners";
@@ -13,14 +12,9 @@ import Partners from "../Footer/Partners/Partners";
 // import Newsletter from "../Footer/Newsletter/Newsletter";
 
 const Home = () => {
-    const {logout} = useAuth0()
+   
     const { products, setProducts, categories, setCategories , changeLoadingState , isLoading } =
         useContext(Context);
-    useEffect(() => {
-        getProducts();
-        getCategories();
-        getOrders();
-    }, []);
 
     const getProducts = () => {
         
@@ -49,6 +43,12 @@ const Home = () => {
             
         });
     };
+
+    useEffect(() => {
+        getProducts();
+        getCategories();
+        getOrders();
+    }, []);
 
 
     return (

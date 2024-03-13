@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Context } from "../../../utils/context";
 import { MdClose } from "react-icons/md";
-
 import "./CartItem.scss";
 import { formatNumber } from "../../../utils/currency";
+
 const CartItem = () => {
     const { cartItems, handleRemoveFromCart, handleCartProductQuantity } =
         useContext(Context);
@@ -21,6 +21,7 @@ const CartItem = () => {
                             src={
                                 item.attributes.image.data[0].attributes.url
                             }
+                            alt = "cart-image"
                         />
                     </div>
                     <div className="prod-details">

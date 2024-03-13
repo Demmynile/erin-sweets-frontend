@@ -1,4 +1,4 @@
-import { useContext, useState , useEffect } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../utils/context";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
@@ -51,6 +51,7 @@ const SingleProduct = () => {
                                 src={
                                     product?.image?.data[0]?.attributes?.url
                                 }
+                                alt="single-product-image"
                             />
                         </div>
                         <div className="right">

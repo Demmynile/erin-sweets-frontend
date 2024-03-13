@@ -53,7 +53,7 @@ const Footer = () => {
                     <span className="text">
                     &copy;2024 Sinnerman Technologies
                     </span>
-                    <img src={Payment} />
+                    <img src={Payment} alt = "footer-image" />
                 </div>
             </div>
         </div>

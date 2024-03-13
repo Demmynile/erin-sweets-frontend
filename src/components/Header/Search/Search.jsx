@@ -58,6 +58,7 @@ const Search = ({ setSearchModal }) => {
                                         item.attributes.image.data[0].attributes
                                             .url
                                     }
+                                    alt ="search-image"
                                 />
                             </div>
                             <div className="prod-details">
