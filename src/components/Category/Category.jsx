@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import Products from "../Products/Products";
 import "./Category.scss";
 import { Loading } from "../misc/loading";
+
 const Category = () => {
     const { id } = useParams();
     const { data } = useFetch(
@@ -16,7 +17,7 @@ const Category = () => {
           
         <div className="layout">
             <div className="category-title">
-                {id === 5 && data  ? `Easter Day` : id === 6 && data  ? `Mother's Day` : id === 7 && data  ? 'Cakes' : id === 8 && data  ? 'Afternoon Tea' : null}
+                {id === 1 && data  ? `Easter Day`  : id === 2 && data  ? 'Cakes' : id === 3 && data  ? 'Afternoon Tea' : null}
             </div>
             <Products innerPage={true} products={data} />
         </div> 
