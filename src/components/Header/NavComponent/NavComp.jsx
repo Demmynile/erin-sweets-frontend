@@ -8,16 +8,16 @@ const NavComp = ({isMobile , setIsMobile }) => {
 
   function func1() {
     // Navigate to the link destination
-    navigate(`/category/${5}`)
+    navigate(`/category/${1}`)
   
   }
   function func2() {
     // Navigate to the link destination
-    navigate(`/category/${6}`)
+    navigate(`/category/${2}`)
   }
   function func3() {
     // Navigate to the link destination
-    navigate(`/category/${7}`)
+    navigate(`/category/${3}`)
   }
   function func4() {
     // Navigate to the link destination
@@ -57,20 +57,21 @@ const NavComp = ({isMobile , setIsMobile }) => {
                     <MdOutlineCancel  onClick={() => setIsMobile(!isMobile)} />
                   </div>
                   <div className='easter'>
-                      <a href="https://erin-sweets-frontend.vercel.app/category/5">Easter</a>
-                    </div>  
-                  <div className='mother'>
-                    <a href="https://erin-sweets-frontend.vercel.app/category/6">Mother's Day</a>
+                      <a href="https://erin-sweets-frontend.vercel.app/category/1">Easter</a>
+                  </div>
+                  <div  className='cakes'>
+                      <a href="https://erin-sweets-frontend.vercel.app/category/2">Cakes</a>
                   </div>  
+                  <div className='easter'>
+                      <a href="https://erin-sweets-frontend.vercel.app/category/3">Afternoon Tea</a>
+                  </div>    
                   <div  className='afternoon' onClick = {() => navigate('/gallery')}>
                         <a>Gallery</a>
                   </div>
                     <div  className='gift' onClick = {() => navigate('/hire')}>
                         <a>Hire</a>
                     </div>      
-                  <div  className='cakes'>
-                      <a href="https://erin-sweets-frontend.vercel.app/category/7">Cakes</a>
-                  </div>  
+                
      
                 
             </div>
