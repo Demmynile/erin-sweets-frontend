@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './Banner.scss';
 import banner1 from '../../../assets/shop.jpg'
-import banner2 from '../../../assets/shop2.jpg'
-
+import banner2 from '../../../assets/shop1.jpg'
+import banner3 from '../../../assets/shop2.jpg'
+import banner4 from '../../../assets/shop3.jpg'
 
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
-    banner1,
-    banner2,
+    banner4,
+    banner3,
   ];
 
   const nextSlide = () => {

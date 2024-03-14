@@ -7,6 +7,17 @@
             max-width: 1200px;
         }
     }
+    .home-img{
+      flex: 0 0 auto;
+      width: 100%;
+      height: 700px;
+      background-size: cover;
+      background-position: center;
+
+      @include md {
+        display: none;
+      }
+    }
     .others {
         max-width: 100%;
         margin: 0 auto;

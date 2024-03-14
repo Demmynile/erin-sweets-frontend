@@ -27,17 +27,20 @@
             font-size: 0.9rem;
             font-weight: 300;
             cursor : pointer;
-
             &:hover {
                 text-decoration: underline;
                 color : #ED92B9;
             }
+
+            @include md {
+                cursor: pointer;
+            }
         }
         .big-text {
             margin-bottom: 20px;
-            font-size: 12px;
+            font-size: 22px;
             line-height: 30px;
-            font-weight: 300;
+            font-weight: 600;
             text-transform: uppercase;
             padding: 0 30px;
             @include md {

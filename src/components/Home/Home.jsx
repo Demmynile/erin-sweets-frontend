@@ -8,8 +8,7 @@ import { Context } from "../../utils/context";
 import { Loading } from "../misc/loading";
 import Newsletter from "../Footer/Newsletter/Newsletter";
 import Partners from "../Footer/Partners/Partners";
-// import Adverts from "../Footer/Adverts/Adverts";
-// import Newsletter from "../Footer/Newsletter/Newsletter";
+import banner from '../../assets/special.jpg'
 
 const Home = () => {
    
@@ -62,6 +61,9 @@ const Home = () => {
                         products={products}
                     />) : (< Loading />)}
                  
+                </div>
+                <div>
+                    <img src = {banner} alt="home-image" className="home-img" />
                 </div>
                 <div className="others">
                    <Partners />
