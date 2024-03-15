@@ -57,13 +57,13 @@ const NavComp = ({isMobile , setIsMobile }) => {
                     <MdOutlineCancel  onClick={() => setIsMobile(!isMobile)} />
                   </div>
                   <div className='easter'>
-                      <a href="https://erin-sweets-frontend.vercel.app/category/1">Easter</a>
+                      <a href="https://erin-sweets-frontend-eta.vercel.app/category/1">Easter</a>
                   </div>
                   <div  className='cakes'>
-                      <a href="https://erin-sweets-frontend.vercel.app/category/2">Cakes</a>
+                      <a href="https://erin-sweets-frontend-eta.vercel.app/category/2">Cakes</a>
                   </div>  
                   <div className='easter'>
-                      <a href="https://erin-sweets-frontend.vercel.app/category/3">Afternoon Tea</a>
+                      <a href="https://erin-sweets-frontend-eta.vercel.app/category/3">Afternoon Tea</a>
                   </div>    
                   <div  className='afternoon' onClick = {() => navigate('/gallery')}>
                         <a>Gallery</a>
