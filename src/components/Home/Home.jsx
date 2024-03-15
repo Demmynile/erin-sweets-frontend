@@ -62,9 +62,9 @@ const Home = () => {
                     />) : (< Loading />)}
                  
                 </div>
-                <div>
+                {/* <div>
                     <img src = {banner} alt="home-image" className="home-img" />
-                </div>
+                </div> */}
                 <div className="others">
                    <Partners />
                    <Newsletter />
