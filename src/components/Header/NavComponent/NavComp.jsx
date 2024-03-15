@@ -45,7 +45,7 @@ const NavComp = ({isMobile , setIsMobile }) => {
                     <a>Gallery</a>
               </div>
             </div>
-          </div>
+       </div>
      
   
       {isMobile && 
