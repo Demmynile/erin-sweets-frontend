@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 import './Hire.scss'
-// import nodeMailjet from 'node-mailjet'
+import nodeMailjet from 'node-mailjet'
 
 const Hire = () => {
 
