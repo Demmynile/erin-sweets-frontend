@@ -6,6 +6,9 @@ import { Loading } from "../misc/loading";
 
 const Category = () => {
     const { id } = useParams();
+    console.log(typeof id)
+    console.log(id)
+    
     const { data } = useFetch(
         `/api/products?populate=*&[filters][categories][id]=${id}`
     );
