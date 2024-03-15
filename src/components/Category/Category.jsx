@@ -17,7 +17,7 @@ const Category = () => {
           
         <div className="layout">
             <div className="category-title">
-                {id === 1 && data  ? `Easter Day`  : id === 2 && data  ? 'Cakes' : id === 3 && data  ? 'Afternoon Tea' : null}
+                {id == 1 && data  ? `Easter Day`  : id == 2 && data  ? 'Cakes' : id == 3 && data  ? 'Afternoon Tea' : null}
             </div>
             <Products innerPage={true} products={data} />
         </div> 
