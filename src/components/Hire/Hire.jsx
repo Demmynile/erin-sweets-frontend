@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import './Hire.scss'
+import nodeMailjet from 'node-mailjet'
 
 const Hire = () => {
 
@@ -17,10 +18,50 @@ const Hire = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+// mailing connection
+
+
+const mailjet = new nodeMailjet.apiConnect(
+  process.env.REACT_APP_MJ_APIKEY_PUBLIC,
+  process.env.REACT_APP_MJ_APIKEY_PRIVATE,
+);
+
+
+const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission logic here
-  };
+    const request = mailjet
+    .post("send", {'version': 'v3.1'})
+    .request({
+      "Messages":[
+        {
+          "From": {
+            "Email": formData.email,
+            "Name": formData.name
+          },
+          "To": [
+            {
+              "Email": "info@erinsweettreats.com",
+              "Name": "Erin manley"
+            }
+          ],
+          "Subject": "Hiring Purpose.",
+          "TextPart": formData.message,
+          "HTMLPart": "",
+          "CustomID": "AppGettingStartedTest"
+        }
+      ]
+    })
+    request
+      .then((result) => {
+        console.log(result.body)
+      })
+      .catch((err) => {
+        console.log(err.statusCode)
+      })
+
+
+};
+
   return (
     <div className='contact-hire'>
       <div className='notice'>
