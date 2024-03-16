@@ -56,8 +56,6 @@ const handleSubmit = (e) => {
       .catch((err) => {
         console.log(err.statusCode)
       })
-
-
 };
 
   return (
